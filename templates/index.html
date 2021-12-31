@@ -1,0 +1,60 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="card text-center bg-info text-white">
+    <div class="card-body">
+      <h4>POTATO LEAF DISEASE PREDICTION</h4>
+    </div>
+</div>
+
+<div class="card mt-4 border-info text-center text-white">
+    <div class="card-body" style="align-content: center;">
+        
+        <div class="row">
+            <div class="col-sm-6">
+              <div class="card" style="height: 30rem;">
+                <div class="card-body">
+
+                    <form id="upload-file" method="post" enctype="multipart/form-data">
+                        <label for="imageUpload" class="btn btn-info btn-lg btn-block mt-2 justify-content-center" style="height: 26rem;">
+                            <h4 style="margin-top: 180px;">Choose Image</h4>
+                        </label>
+                        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+                    </form>
+
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="card" style="height: 30rem;">
+                <div class="card-body">
+
+                    <div class="image-section d-flex justify-content-center" style="display:none;">
+                        <div class="img-preview">
+                            <div id="imagePreview">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <button type="button" class="btn btn-info btn-lg btn-block" id="btn-predict">Predict!</button>
+                    </div>
+                
+                    <div class="loader" style="display:none; align-content: center;"></div>
+            
+                    <div class="card border-info mb-3 mt-4">
+                        <div class="card-body text-info">
+                            <h3 style="color: black;" id="result">
+                                <span> </span>
+                            </h3>  
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+    </div>
+</div>
+
+{% endblock %}
